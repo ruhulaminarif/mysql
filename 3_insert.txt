@@ -1,0 +1,4 @@
+INSERT INTO customer(id,name,email,phone) 
+VALUE(NULL, 'Ruhul amin','r@gmail.com','01285245');
+
+customer-> Table name
