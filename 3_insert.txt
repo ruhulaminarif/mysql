@@ -2,3 +2,8 @@ INSERT INTO customer(id,name,email,phone)
 VALUE(NULL, 'Ruhul amin','r@gmail.com','01285245');
 
 customer-> Table name
+
+INSERT INTO customer(id,name,email,phone) 
+VALUES (NULL, 'Ruhul','c@gmail.com','02555558'), 
+       (NULL, 'Alim','a@gmail.com','02885788'), 
+        (NULL, 'kabir','k@gmail.com','01545455');
