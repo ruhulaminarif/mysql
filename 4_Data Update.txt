@@ -1,0 +1,7 @@
+update customer
+SET emil='r@yahoo.com'
+where 1;
+
+
+customer -> Table name.
+Email -> Table change column name
