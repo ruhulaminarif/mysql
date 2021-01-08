@@ -1,0 +1,13 @@
+CREATE DATABASE arif (arif Databse name)
+
+DROP DATABASE arif (Database Delete  )
+
+Manually
+===========
+
+Go-> http://localhost/phpmyadmin
+Click -> Database -> CREATE DATABASE(Database name) -> CREATE 
+
+DROP DATABASE
+==============
+click-> Database Name -> operations -> Remove Database(Drop The Database)
