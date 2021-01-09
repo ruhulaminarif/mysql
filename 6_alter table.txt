@@ -1,0 +1,43 @@
+
+---------ADD-----------
+ALTER TABLE table_name
+ADD column_name datatype;
+---------------------
+Alter Table employers 
+ADD Email varchar(25) After JoinDate
+
+==============================
+
+---------DROP-----------
+ALTER TABLE table_name
+DROP COLUMN column_name;
+----------------------
+Alter Table employers 
+Drop email;
+
+================================
+
+-------------------Modify-------------------------
+ALTER TABLE table_name
+MODIFY column_name datatype;
+-------------------------
+Alter TABLE customer 
+MODIFY phone int(11)
+--------------------
+ALTER TABLE customer 
+MODIFY COLUMN phone varchar(50)
+
+======================================
+
+----------RENAME----------
+ALTER TABLE employees
+RENAME TO new_employees;
+
+-------------------------------------------------
+
+ALTER TABLE new_employees
+CHANGE Email 
+New_Email VARCHAR(50);
+
+
+
