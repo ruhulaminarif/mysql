@@ -1,0 +1,24 @@
+
+SELECT * FROM `employees` 
+WHERE firstName LIKE "%y"
+
+Show last Y Digit,First name .
+
+------------------------------
+
+SELECT * FROM `employees` 
+WHERE firstName LIKE "a%"
+
+Show First a Digit name
+
+------------------------
+
+SELECT * FROM employees 
+WHERE lastName LIKE "%ar%"
+
+-----------------------------
+
+SELECT * FROM employees 
+WHERE lastName NOT LIKE "%ar%"
+
+-------------------------------
