@@ -1,0 +1,82 @@
+SELECT * FROM table_name
+
+All Data Select
+==================
+
+SELECT * FROM table_name LIMIT 3;
+Show 3 data
+
+SELECT * FROM table_name LIMIT 3,4;
+show 4 data After 3
+
+====================
+
+SELECT 
+	lastName,
+	firstName 
+	FROM employees(table thke data select)
+employees -> Table name
+=========================
+
+SELECT * FROM table_name 
+where id='2';
+
+Show 2 no row all data
+
+======================
+
+SELECT * FROM table_name  
+order by lastname;
+
+show lastname Order list
+--------
+SELECT * FROM table_name  
+order by lastname DESC;
+-------------
+SELECT * FROM table_name  
+order by lastname ASC;
+==============================
+
+SELECT DISTINCT lastname FROM table_name;
+
+Don't Show double value.
+==================
+
+SELECT 
+	lastName,
+	firstName,
+	email,
+	jobTitle 
+FROM employees 
+WHERE jobTitle='sales rep'
+
+----------
+SELECT lastName, firstName, officeCode, jobTitle FROM employees WHERE jobTitle='sales rep' AND officeCode=4
+SELECT lastName, firstName, officeCode, jobTitle FROM employees WHERE jobTitle='sales rep' or officeCode=4
+
+SELECT lastName, firstName, officeCode, jobTitle,reportsTo FROM employees WHERE jobTitle='sales rep' AND officeCode=4 AND reportsTo > 1100
+===================
+SELECT state FROM customers
+SELECT customerNumber,customerName,country FROM customers GROUP by salesRepEmployeeNumber
+====================
+SELECT
+	orderNumber,quantityOrdered,(priceEach * quantityOrdered) AS totalprice
+FROM
+	orderdetails
+=================
+SELECT 
+	productCode,productName,buyPrice 
+FROM 
+	products 
+WHERE 
+	buyPrice 
+BETWEEN 90 AND 100
+==============
+SELECT 
+	productCode,productName,buyPrice 
+FROM 
+	products 
+WHERE buyPrice NOT BETWEEN 90 AND 100
+
+
+
