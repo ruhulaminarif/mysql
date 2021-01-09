@@ -1,0 +1,8 @@
+DELETE FROM table_name
+WHERE some_column = some_value
+
+DELETE FROM employers 
+where id="6"
+
+
+employers  table name
