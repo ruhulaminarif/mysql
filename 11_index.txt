@@ -1,0 +1,31 @@
+CREATE INDEX cindex
+om Table_name(colum name); 
+==============
+CREATE INDEX incity 
+ON customers (city)
+
+====================
+SELECT city FROM customers
+====================
+
+Index Drop
+==========
+DROP INDEX  INDEX_name ON Table_name
+
+DROP INDEX incity ON customers;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====================
