@@ -1,0 +1,6 @@
+SELECT * FROME table_name
+WHERE Clum_name IN "
+
+===========================
+SELECT * FROM `customers` 
+WHERE contactFirstName IN ("Kelvin" ,"Marie")
