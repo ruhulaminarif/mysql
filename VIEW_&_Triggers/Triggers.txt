@@ -1,0 +1,78 @@
+Crate table employes(
+
+id INT UNSIGED NOT NULL AUTO_INCREMENT,
+employee_id CHAR(8) NOT NULL,
+first_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+phone CHAR(11) NOT NULL,
+Salary DECIMAL(8,2) NOT NULL,
+PRIMARY KEY(id),
+)
+
+
+============INSERT ===========
+
+INSERT INTO employees (id,employee_id,first_name,last_name,email,phone,Salary) 
+VALUES(NULL,'111','Arif','Hossain','a@gmail.com','01288555','10000'), 
+(NULL,'112','Ruhul','amin','r@gmail.com','0123654','12000'), 
+(NULL,'113','sumon','hossain','s@gmail.com','014789','14000'), 
+(NULL,'114','Moshin','rahaman','m@gmail.com','12369','15000')
+
+==============================
+
+CREATE TABLE employees_log (
+	log_id INT NOT NULL AUTO_INCREMENT;
+	employee_id MEDIUMINT NOT NULL,
+	event VARCHAR(20)
+	date_time DATETIME,
+	PRIMARY KEY(log_id)
+)
+
+================New Create====================
+
+DELIMITER $$
+
+CREATE TRIGGER after_insert_employee
+AFTER INSERT
+ON employees FOR EACH ROW
+BEGIN
+    
+        INSERT INTO employee_log(log_id, employee_id,event,date_time)
+        VALUES('',NEW.employee_id,'create', now());
+    
+END$$
+
+DELIMITER ;
+
+================UPDATE================
+
+DELIMITER $$
+
+CREATE TRIGGER before_insert_employee
+BEFORE UPDATE
+ON employees FOR EACH ROW
+BEGIN
+    
+        INSERT INTO employee_log(log_id, employee_id,event,date_time)
+        VALUES('',OLD.employee_id,'update', now());
+    
+END$$
+
+DELIMITER ;
+
+====================================
+
+DELIMITER $$
+
+CREATE TRIGGER before_delete_employee
+BEFORE DELETE
+ON employees FOR EACH ROW
+BEGIN
+    
+        INSERT INTO employees_log(log_id, employee_id,event,date_time)
+        VALUES('',OLD.employee_id,'DELETE', now());
+    
+END$$
+
+DELIMITER ;

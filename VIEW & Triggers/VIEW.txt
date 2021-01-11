@@ -1,0 +1,36 @@
+Crate table employes(
+
+id INT UNSIGED NOT NULL AUTO_INCREMENT,
+employee_id CHAR(8) NOT NULL,
+first_name VARCHAR(100) NOT NULL,
+last_name VARCHAR(100) NOT NULL,
+email VARCHAR(100) NOT NULL,
+phone CHAR(11) NOT NULL,
+Salary DECIMAL(8,2) NOT NULL,
+PRIMARY KEY(id),
+)
+
+
+============INSERT ===========
+
+INSERT INTO employees (id,employee_id,first_name,last_name,email,phone,Salary) 
+VALUES(NULL,'111','Arif','Hossain','a@gmail.com','01288555','10000'), 
+(NULL,'112','Ruhul','amin','r@gmail.com','0123654','12000'), 
+(NULL,'113','sumon','hossain','s@gmail.com','014789','14000'), 
+(NULL,'114','Moshin','rahaman','m@gmail.com','12369','15000')
+
+===========VIEW============
+CREATE VIEW employees_info_view AS
+SELECT employee_id,first_name,Salary FROM employees
+
+==========SELECT DATA=============
+SELECT * FROM employees_info_view;
+
+=========VIEW INSERT ============
+INSERT INTO employees_info_view VALUES('1116','sakil','20255')
+
+===========VIEW Update===============
+UODATE employees_info_view SET salary='500' where employee_id='1116'
+
+==============VIEW DELETE===========
+DELETE FROM employees_info_view WHERE employee_id='1116'
