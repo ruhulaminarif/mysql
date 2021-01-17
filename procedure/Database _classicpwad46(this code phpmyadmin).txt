@@ -1,0 +1,12 @@
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `data_insert`(
+IN n_val char(50),
+    IN e_val char(30),
+    IN m_val char(20),
+    IN g_val char(10)
+)
+BEGIN
+INSERT INTO student_info(id, name, email, mobile, gender)
+VALUES(NULL, n_val, e_val, m_val, g_val);
+END$$
+DELIMITER ;
