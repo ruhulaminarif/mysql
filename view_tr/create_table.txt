@@ -1,0 +1,30 @@
+CREATE TABLE student_info(
+    id int(11) NOT NULL,
+    name varchar(50) NOT NULL,
+    email varchar(50) NOT NULL,
+    mobile varchar(50) NOT NULL,
+    gender enum('male','female') NOT NULL
+    );
+
+
+CREATE TABLE present_add(
+    id int(11) NOT NULL AUTO_INCREMENT,
+    road_area varchar(150) NOT NULL,
+    district varchar(150) NOT NULL,
+    stinfo_id int(10) NOT NULL,
+    PRIMARY KEY(id)
+    )
+
+
+view table
+================
+
+CREATE VIEW student_detalis_view AS
+SELECT student_info.id,name,mobile,gender,road_area,district FROM
+student_info,present_add WHERE student_info.id=stinfo_id
+
+Trigger
+============
+CREATE TRIGGER `after_delete_student_tigger` AFTER DELETE ON `student_info` 
+FOR EACH ROW DELETE FROM present_add WHERE stinfo_id= OLD.id
+
