@@ -1,0 +1,7 @@
+SELECT AVG(buyprice) AS Avgprice FROM products;
+SELECT MAX(buyprice) AS Maxprice FROM products;
+SELECT MIN(buyprice) AS Minprice FROM products;
+SELECT SUM(buyprice) AS Totalprice FROM products;
+
+products table name
+buyprice table column name
